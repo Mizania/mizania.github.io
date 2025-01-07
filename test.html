@@ -1,8 +1,91 @@
-<!-- fix : <html> element does not have a [lang] attribute -->
+<!-- 
+URL: https://web.dev/html-has-lang
+Category: Accessibility
+Title: <html> element does not have a [lang] attribute
+Reason: Screen readers rely on the lang attribute to select the appropriate sound library
+Fix: <html lang="en"> 
+-->
 <html lang="en">
+
 <head>
+  <!-- 
+  URL: https://web.dev/meta-viewport
+  Category: Accessibility
+  Title: <meta> viewport element for responsive design
+  Reason: Ensures the page is properly scaled for mobile devices
+  Fix: Added <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- 
+  URL: https://web.dev/meta-description
+  Category: SEO
+  Title: Document does not have a meta description
+  Reason: Meta descriptions improve discoverability and click-through rate on search engines
+  Fix: Added a meta description tag
+  -->
+  <meta name="description" content="A simple Hello World webpage example with full accessibility, performance, and SEO compliance.">
+
+  <!-- 
+  URL: https://web.dev/structured-data
+  Category: SEO
+  Title: Document does not use structured data
+  Reason: Helps search engines understand the content better
+  Fix: Added structured data in JSON-LD format
+  -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Hello World Example",
+      "description": "A simple Hello World webpage example with full accessibility, performance, and SEO compliance."
+    }
+  </script>
+
+  <!-- 
+  URL: https://web.dev/uses-rel-preconnect
+  Category: Performance
+  Title: Use rel=preconnect to establish early connections
+  Reason: Improves page load speed by pre-connecting to external resources
+  Fix: Added preconnect to an example font resource
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- 
+  URL: https://web.dev/uses-rel-preload
+  Category: Performance
+  Title: Use rel=preload for key resources
+  Reason: Preloading fonts improves render speed
+  Fix: Added preload for a font resource
+  -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+
+  <!-- 
+  URL: https://web.dev/link-text
+  Category: Accessibility
+  Title: Links do not have descriptive text
+  Reason: Screen readers benefit from clear, descriptive link text
+  Fix: Ensure all links on the page have descriptive text
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Hello World Example</title>
 </head>
+
 <body>
-  Hello World!
+  <!-- 
+  URL: https://web.dev/accessible-name
+  Category: Accessibility
+  Title: Ensure images have alternate text
+  Reason: Helps users who rely on screen readers
+  Fix: Added alt text to the image
+  -->
+  <img src="example.jpg" alt="Example image showing a Hello World banner" width="600" height="300">
+  
+  <h1>Hello World!</h1>
+  <p>Welcome to the Hello World example page, optimized for accessibility, performance, best practices, and SEO.</p>
 </body>
+
 </html>
